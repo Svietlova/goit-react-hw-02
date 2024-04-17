@@ -1,0 +1,6 @@
+.list {
+    display: grid;
+    place-items: start;
+    gap: 8px;
+    padding: 30px 0;
+}
