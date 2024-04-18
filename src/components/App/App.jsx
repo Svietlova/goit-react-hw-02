@@ -53,14 +53,9 @@ export default function App() {
         totalFeedback={totalFeedback}
         onReset={resetClicks}
       />
-      {!totalFeedback > 0 && <Notification />}
-      {totalFeedback > 0 && (
-        <Feedback
-          feedback={clicks}
-          total={totalFeedback}
-          positive={ratePositiveFeedback}
-        />
-      )}
+      {totalFeedback > 0
+        ? <Feedback feedback={clicks} total={totalFeedback} positive={ratePositiveFeedback} />
+        : <Notification />}
     </div>
   );
 }
